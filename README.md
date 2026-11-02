@@ -11,12 +11,12 @@ Cập nhật 02/11/2026. Danh mục gồm **80 bài thuộc 16 nhóm kiến th�
 - [II. Duyệt dãy, ma trận và điều kiện](#nhom-ii)
 - [III. Số học, quy luật và ngày tháng](#nhom-iii)
 - [IV. Phương trình và hình học](#nhom-iv)
-- [V. Dictionary: tra cứu, tần suất và tổng hợp](#nhom-v)
-- [VI. Sắp xếp và xử lý bản ghi](#nhom-vi)
+- **[V. Dictionary: tra cứu, tần suất và tổng hợp](#nhom-v) (cần thiết cho vuln research)**
+- **[VI. Sắp xếp và xử lý bản ghi](#nhom-vi) (cần thiết cho vuln research)**
 - [VII. Đệ quy và quay lui](#nhom-vii)
-- [VIII. Stack và mô phỏng hàng vòng tròn](#nhom-viii)
+- **[VIII. Stack và mô phỏng hàng vòng tròn](#nhom-viii) (cần thiết cho vuln research)**
 - [IX. Đoạn liên tục: set, tổng tích lũy và cửa sổ](#nhom-ix)
-- [X. BFS/DFS, trạng thái và nhóm liên thông](#nhom-x)
+- **[X. BFS/DFS, trạng thái và nhóm liên thông](#nhom-x) (cần thiết cho vuln research)**
 - [XI. Heap và tham lam](#nhom-xi)
 - [XII. Quy hoạch động](#nhom-xii)
 - [XIII. Cây khung nhỏ nhất và DSU](#nhom-xiii)
