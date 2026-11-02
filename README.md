@@ -556,13 +556,3 @@ Tổng tiền tố + bisect + mảng hiệu để xử lý đóng góp trên nhi
 | STT | Bài | Python sử dụng | Cách làm và chú ý |
 |---:|---|---|---|
 | 73 | [Làm bóng tuyết](https://laptrinhonline.club/problem/snowparty) | Prefix sum, `bisect_left`, mảng hiệu, list | P là tổng tiền tố nhiệt độ. Với quả ngày i, tìm ngày j tan hết bằng bisect_left(P,P[i]+V[i],i+1)-1; dùng mảng hiệu đếm các ngày tan trọn T và cộng phần còn lại vào extra[j]. Nếu chưa tan hết trong n ngày thì đánh dấu tới n. Đáp án ngày j là active*T[j]+extra[j]. O(n log n); cũng có cách heap kết hợp tổng nhiệt tích lũy. |
-
-## Nguồn 5 buổi thực hành và các bài chỉ có trong PDF
-
-Bảng đối chiếu được lưu cùng kế hoạch ôn; mã bài theo PDF, bài trùng mã chỉ tính một lần. Tiền điện nhà Dan (76) và Đếm số số chính phương (77) hiện báo No such problem trên trang công khai, vẫn có thể ôn đề trong PDF. Không tự thay mã bằng URL đoán hoặc kết luận bài đã bị xóa.
-
-- [Buổi 1](<C:/Users/grind/Desktop/thuật toán/Huong_dan_thuc_hanh_Buoi_1.pdf>) — 17 trang.
-- [Buổi 2](<C:/Users/grind/Desktop/thuật toán/Huong_dan_thuc_hanh_Buoi_2.pdf>) — 23 trang.
-- [Buổi 3](<C:/Users/grind/Desktop/thuật toán/Huong_dan_thuc_hanh_Buoi_3.pdf>) — 21 trang.
-- [Buổi 4](<C:/Users/grind/Desktop/thuật toán/Huong_dan_thuc_hanh_Buoi_4.pdf>) — 19 trang.
-- [Buổi 5](<C:/Users/grind/Desktop/thuật toán/Huong_dan_thuc_hanh_Buoi_5.pdf>) — 17 trang.
