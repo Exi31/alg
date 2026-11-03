@@ -1,8 +1,10 @@
-# 80 bài tập Python và thuật toán — kiến thức và cách làm
+# 100 bài tập Python và thuật toán — kiến thức và cách làm
 
-Tài liệu ôn tập chia theo 16 nhóm. Mỗi nhóm có kiến thức Python cần dùng, các chú ý khi code và hướng giải cho từng bài. Nhấn vào tên bài để mở đề gốc trên [Lập Trình Online](https://laptrinhonline.club/).
+Tài liệu ôn tập chia theo 16 nhóm. Mỗi nhóm có kiến thức Python cần dùng, các chú ý khi code và hướng giải cho từng bài. Nhấn vào tên bài để mở đề gốc trên [Lập Trình Online](https://laptrinhonline.club/) hoặc tới đề được lưu trong phụ lục nếu link gốc không còn truy cập được.
 
-Cập nhật 02/11/2026. Danh mục gồm **80 bài thuộc 16 nhóm kiến thức**, giữ nguyên số thứ tự bài. Mỗi bài được xếp vào một nhóm chính; kỹ thuật phụ ghi trong hướng giải.
+Cập nhật 03/11/2026. Danh mục gồm **100 bài thuộc 16 nhóm kiến thức**, giữ nguyên số thứ tự bài. Mỗi bài được xếp vào một nhóm chính; kỹ thuật phụ ghi trong hướng giải.
+
+Bài 1–80 giữ nguyên số thứ tự; 81–90 là 10 đề kiểm tra đã gửi bằng ảnh; 91–100 là bài luyện bổ sung thuộc bốn nhóm V, VI, VIII và X. Đề bài 76–77 và 81–90 được lưu đầy đủ trong [phụ lục](#phu-luc-de-bai); không đoán URL cho các đề ảnh.
 
 ## Mục lục
 
@@ -23,6 +25,7 @@ Cập nhật 02/11/2026. Danh mục gồm **80 bài thuộc 16 nhóm kiến th�
 - [XIV. Xử lý ngược và danh sách liên kết bằng mảng/dict](#nhom-xiv)
 - [XV. Đường đi ngắn nhất có trọng số: Dijkstra](#nhom-xv)
 - [XVI. Tổng tiền tố, tìm kiếm nhị phân và mảng hiệu](#nhom-xvi)
+- [Phụ lục: 12 đề bài không còn truy cập được qua link](#phu-luc-de-bai)
 
 <a id="kien-thuc-chung"></a>
 ## Kiến thức Python dùng chung
@@ -86,7 +89,8 @@ print(f"{3.14159:.3f}")
 | 4 | [Factorial of a large number](https://laptrinhonline.club/problem/tichpxgiaithuasolon) | `int`, vòng lặp; tùy chọn `math.factorial` | Khởi tạo `answer = 1`, nhân lần lượt từ `2` đến `n`, in toàn bộ kết quả. Không lấy modulo, không dùng số thực. Có n−1 phép nhân; chi phí mỗi phép tăng khi số có nhiều chữ số. |
 | 5 | [Nhân 2 số lớn](https://laptrinhonline.club/problem/tichpxnhansolon) | `int`, đọc hai dòng | Theo lựa chọn giải bằng Python đã dùng: đọc hai số nguyên rồi in `x * y`. Giữ tính toán dạng nguyên; không đưa qua `float`. |
 | 6 | [t2r2. Tổng dãy số](https://laptrinhonline.club/problem/tichpxtongdayso) | `stdin`, vòng lặp, modulo | Đọc các số đến EOF, cộng vào `total`; in tổng modulo `1000000007`. Có thể lấy modulo sau mỗi lần cộng. Không đọc nhầm số đầu thành số lượng phần tử. |
-| 76 | [Tiền điện nhà Dan](https://laptrinhonline.club/problem/hhb1) | `int`, `if/elif/else`, phép nhân | Chọn một đơn giá theo tổng n: n<50 giá 100; n<1000 giá 500; n<10000 giá 1000; còn lại 1200. Tiền=n*đơn_giá, không tính lũy tiến. Có đề và mã trong Buổi 1 trang 5; link công khai hiện báo No such problem. |
+| 76 | [Tiền điện nhà Dan](#de-bai-76) | `int`, `if/elif/else`, phép nhân | Chọn một đơn giá theo tổng n: n<50 giá 100; n<1000 giá 500; n<10000 giá 1000; còn lại 1200. Tiền=n*đơn_giá, không tính lũy tiến. Có đề và mã trong Buổi 1 trang 5; link công khai hiện báo No such problem. |
+| 82 | [Chuẩn hóa họ tên](#de-bai-82) | `split`, `capitalize`, `join` | Tách các từ bằng split(), chuẩn hóa từng từ bằng capitalize(), ghép với một dấu cách. Không cần tự xử lý từng khoảng trắng. |
 
 <a id="nhom-ii"></a>
 ## II. Duyệt dãy, ma trận và điều kiện
@@ -151,7 +155,9 @@ print(f"{3.14159:.3f}")
 | 22 | [Bộ ba Pytago](https://laptrinhonline.club/problem/563296qd) | `isqrt`, `abs`, thử số ít trường hợp | Lần lượt chọn số x để sửa, giữ u,v. Bình phương cạnh mới có thể là `u*u+v*v` hoặc `abs(u*u-v*v)`. Nhận t nếu `r=isqrt(t)` thỏa `r>0` và `r*r==t`; chi phí `abs(r-x)`. Lấy min cho cả ba vị trí, không có thì -1. Bao gồm đáp án 0 nếu bộ ban đầu đã đúng. |
 | 23 | [0.Cánh cửa thần kì](https://laptrinhonline.club/problem/themisutc) | List tên, `while`, `//` | Mỗi khối có 5 tên, mỗi tên lặp b lần với b=1,2,4,... Đặt b=1; khi x>5*b, trừ x đi 5*b rồi nhân đôi b. Tên cần tìm có chỉ số `(x-1)//b`. Đặt lại x/b cho mỗi truy vấn, không mô phỏng deque dài. O(log x). |
 | 24 | [Lại là Lật mặt các đồng xu](https://laptrinhonline.club/problem/tichpxlllatdongxu) | `math.isqrt`, đọc nhiều test | Đồng xu i bị lật bằng số ước của i; chỉ chính phương có số ước lẻ. Ban đầu ngửa nên chính phương thành sấp, số ngửa là `n-isqrt(n)`. Không tạo n đồng xu hoặc dùng sqrt float với n tới 10¹⁸. |
-| 77 | [Đếm số số chính phương](https://laptrinhonline.club/problem/tichpxdemsocp) | `math.isqrt`, đọc nhiều test, phép trừ | Đếm trong [A,B] bằng isqrt(B)-isqrt(A-1), gồm cả hai đầu. Không duyệt mọi số hoặc dùng căn float. Có ở Buổi 1 trang 17 và Buổi 2 trang 15; chỉ tính là một bài. Link công khai hiện báo No such problem. |
+| 77 | [Đếm số số chính phương](#de-bai-77) | `math.isqrt`, đọc nhiều test, phép trừ | Đếm trong [A,B] bằng isqrt(B)-isqrt(A-1), gồm cả hai đầu. Không duyệt mọi số hoặc dùng căn float. Có ở Buổi 1 trang 17 và Buổi 2 trang 15; chỉ tính là một bài. Link công khai hiện báo No such problem. |
+| 81 | [Tổng các ước](#de-bai-81) | `isqrt`, `%`, `//` | Duyệt i từ 1 đến isqrt(n). Nếu i chia hết n, cộng i và n//i; chỉ cộng một lần khi hai ước bằng nhau. O(sqrt(n)). |
+| 83 | [Đếm số nguyên tố](#de-bai-83) | Sàng, list/bytearray, tổng tiền tố | Sàng tới cận lớn nhất của truy vấn, đặt 0 và 1 không nguyên tố. Tạo pref[i] đếm số nguyên tố không vượt i; mỗi truy vấn trả pref[b]-pref[a-1]. |
 
 <a id="nhom-iv"></a>
 ## IV. Phương trình và hình học
@@ -210,6 +216,11 @@ print(f"{3.14159:.3f}")
 | 36 | [Đếm giầy](https://laptrinhonline.club/problem/tichpxdemdep) | Slicing chuỗi, hai dict | Tách `side=shoe[0]`, `size=shoe[1:]`; đếm trái/phải theo size. Tổng số đôi bằng tổng `min(left[size],right.get(size,0))` trên các size bên trái. Không cần tìm và xóa từng chiếc trong list. |
 | 37 | [Xây dựng lan can đường sắt Cát Linh - Hà Đông](https://laptrinhonline.club/problem/tichpxlancan) | List đếm hoặc Counter, đọc nhanh | Đếm số thanh mỗi độ dài ở hai bên; số cặp bằng tổng min hai tần suất. Với miền 1..1000 dùng hai list dài 1001 và duyệt miền giá trị. Dữ liệu lớn nên tránh giữ đồng thời list đầu vào và bảng đếm nếu không cần; giữ đúng số nguyên khi đọc. |
 | 38 | [Tính điểm thi lập trình](https://laptrinhonline.club/problem/tichpxtinhdiem) | `dict(zip(...))`, dict hệ số, `int`, sort | Đọc tiêu đề để biết vị trí TEN,A,B,C,D,E. Ghép mỗi dòng với tiêu đề; tính A+2B+3C+4D+5E, lưu tên/điểm, sắp tên tăng. Không cố định vị trí cột; tên trong bài không chứa khoảng trắng. |
+| 84 | [Từ xuất hiện nhiều nhất](#de-bai-84) | Dict, `get`, `items`, `min` với `key` | Đếm tần suất. Chọn theo khóa (-tần suất, từ) để ưu tiên tần suất lớn và từ nhỏ nhất khi hòa. |
+| 91 | [Kiểm tra xem có hai điểm trùng nhau không](https://laptrinhonline.club/problem/tichpx2diemtrungnhau) | Tuple, `set`, toán tử `in` | Lưu mỗi điểm dưới dạng (x,y); gặp lại một điểm thì có trùng. O(n) trung bình. Với n tới 10^6, chú ý bộ nhớ của set tuple; có thể mã hóa cặp tọa độ thành một khóa số nguyên duy nhất hoặc sắp xếp rồi so sánh kề nhau. |
+| 92 | [Những phần tử có tần suất cao nhất](https://laptrinhonline.club/problem/tichpxtansuatcao) | Dict, `get`, `max`, `sorted` | Đếm tần suất, tìm tần suất lớn nhất, lọc tất cả khóa đạt mức đó và in tăng dần. Khác bài 84: cần liệt kê tất cả giá trị đạt cực đại. |
+| 93 | [Đếm số cặp cột điện bằng nhau](https://laptrinhonline.club/problem/tichpxcapcotdien) | Dict, `get`, biến tổng | Với mỗi chiều cao x, cộng số lần x đã xuất hiện vào đáp án rồi tăng đếm. Tương đương cộng c*(c-1)//2 cho từng tần suất c. O(n) trung bình; dùng đọc nhanh vì n tới 10^6. |
+| 94 | [Quân tượng thú vị](https://laptrinhonline.club/problem/54676) | Hai dict, khóa `x-y` và `x+y` | Hai quân tượng ăn nhau khi cùng một đường chéo. Đếm cặp theo hai khóa x-y và x+y bằng tần suất; đề cho phép ăn nhau dù có quân ở giữa. O(n) trung bình. |
 
 <a id="nhom-vi"></a>
 ## VI. Sắp xếp và xử lý bản ghi
@@ -239,6 +250,8 @@ print(f"{3.14159:.3f}")
 | 42 | [Sắp xếp danh sách sinh viên](https://laptrinhonline.club/problem/tichpxsxdssv) | Đọc EOF, unpacking, datetime, stable sort | Mỗi dòng: `*name,birth,gender`. Đọc tới EOF, lưu bản ghi, sort chỉ theo ngày sinh tăng. Chuyển ngày thành datetime hoặc `(year,month,day)` để so đúng; người cùng ngày sinh giữ thứ tự gốc. |
 | 43 | [Quản lý danh sách sinh viên](https://laptrinhonline.club/problem/tichpxdssinhvien) | Unpacking, dict, `int`, `float`, sort | Tách hai trường cuối là tuổi/điểm; tuổi chuyển int và đếm tần suất, điểm chuyển float. In thống kê tuổi tăng, rồi danh sách theo điểm giảm. Điểm in 2 chữ số; thống kê tuổi có mẫu `tuoi : count`. |
 | 44 | [Vị trí sau khi sắp xếp](https://laptrinhonline.club/problem/tichpxvitrisausx) | `enumerate`, tuple, sort | Lưu `(value,index+1)` rồi sắp theo value tăng và in chỉ số gốc. Dữ liệu bài có giá trị phân biệt; lưu chỉ số vẫn tránh việc tìm/xóa liên tục. O(n log n), không làm biến đổi chỉ số của dãy gốc. |
+| 95 | [Sắp xếp chẵn/lẻ](https://laptrinhonline.club/problem/basic2) | List, `%`, slicing `[::-1]` | Theo ví dụ: gom số lẻ theo thứ tự xuất hiện, rồi ghép số chẵn theo thứ tự xuất hiện đảo ngược. Đây là sắp lại theo nhóm, không phải sort giá trị tăng dần. O(n). |
+| 96 | [Xây dựng cửa xuống hầm](https://laptrinhonline.club/problem/tichpx) | `sort`, chỉ số trung vị, `abs`, `sum` | Sắp xếp các tọa độ và chọn một trung vị. Cộng khoảng cách tuyệt đối tới trung vị để được tổng nhỏ nhất; n chẵn chọn một trong hai trung vị đều được. O(n log n). |
 
 <a id="nhom-vii"></a>
 ## VII. Đệ quy và quay lui
@@ -292,6 +305,11 @@ print(f"{3.14159:.3f}")
 | 50 | [Chào đón tân sinh viên K59](https://laptrinhonline.club/problem/tichpxchaodonk59) | Hai lượt stack chỉ số, list left/right | Quét trái sang phải: pop khi chiều cao đỉnh ≤ người mới; đỉnh còn lại là người cao hơn gần nhất bên trái, ghi trước khi append i. Làm tương tự từ phải sang trái với stack mới. So hai khoảng cách, hòa chọn trái; không có thì -1. In chỉ số 0-based. O(n). |
 | 79 | [Xếp hàng](https://laptrinhonline.club/problem/tichpxxephang) | Stack tuple/list (chiều cao, số lượng), `append/pop`, biến đếm | Đếm cặp nhìn thấy nhau bằng stack giảm dần, gộp người cùng chiều cao. Pop nhóm thấp hơn và cộng số người; nhóm bằng nhau cộng cnt rồi gộp; nếu sau nhóm bằng còn người cao hơn thì cộng thêm một. Mỗi người vào/ra stack hữu hạn, tổng O(n). Phân biệt với Xếp hạng (mrt48). |
 | 80 | [Kiểm tra ngoặc đúng](https://laptrinhonline.club/problem/kiemtrangoacdung) | List làm stack, `append/pop`, dict tra cặp ngoặc và thứ bậc | Duyệt chuỗi, đẩy ngoặc mở vào stack; ngoặc đóng phải khớp đỉnh rồi pop. Ngoài cân bằng, kiểm tra thứ tự lồng: ngoặc tròn không chứa vuông/nhọn, ngoặc vuông không chứa nhọn. Có thể gán bậc tròn=1, vuông=2, nhọn=3 và cấm đẩy bậc lớn hơn đỉnh. Cuối cùng stack phải rỗng. In Dung hoặc Sai; O(L) thời gian và bộ nhớ. |
+| 85 | [Dãy ngoặc đúng](#de-bai-85) | List làm stack, dict cặp ngoặc | Đẩy ngoặc mở; ngoặc đóng phải khớp đỉnh rồi pop. Cuối cùng stack phải rỗng. Bài này không có thứ bậc giữa các loại ngoặc như bài 80. |
+| 86 | [Chia bài](#de-bai-86) | `deque`, `popleft`, `append` | Khi còn ít nhất hai lá: bỏ lá đầu và ghi kết quả, rồi chuyển lá đầu tiếp theo xuống cuối. In thứ tự bỏ và lá còn lại. O(n). |
+| 88 | [Ngày ấm hơn](#de-bai-88) | Stack chỉ số, list kết quả | Duyệt ngày i; khi nhiệt độ i lớn hơn ngày ở đỉnh, pop j và gán kết quả[j]=i-j. Đẩy i; những ngày chưa tìm được giữ 0. O(n). |
+| 97 | [Xóa k chữ số được số lớn nhất](https://laptrinhonline.club/problem/tichpxxoakchusomax) | Chuỗi, list stack, `append/pop`, `join` | Duyệt chữ số: còn lượt xóa và đỉnh nhỏ hơn chữ số mới thì pop; sau đó append. Nếu còn lượt xóa sau khi duyệt, xóa từ cuối. Mỗi truy vấn khởi tạo lại stack và k; O(L), không đổi chuỗi dài thành int. |
+| 98 | [Biểu thức hậu tố Ba Lan](https://laptrinhonline.club/problem/tichpxhtbalan) | Hai lượt xử lý stack, dict độ ưu tiên toán tử | Dùng stack toán tử chuyển trung tố sang hậu tố, xử lý ngoặc và ưu tiên phép tính. Sau đó tính hậu tố bằng stack số; pop toán hạng phải trước rồi trái. Phân biệt chia nguyên cắt về 0 với // khi số âm; kiểm tra quy ước của đề. |
 
 <a id="nhom-ix"></a>
 ## IX. Đoạn liên tục: set, tổng tích lũy và cửa sổ
@@ -354,6 +372,9 @@ print(f"{3.14159:.3f}")
 | 63 | [Chữ số 6 và 8](https://laptrinhonline.club/problem/tichpx68) | Deque phần dư, list parent/digit, dựng chuỗi | Khởi tạo phần dư 6%n rồi 8%n; từ r thử d=6 rồi 8 với `nr=(10*r+d)%n`. Mỗi phần dư giữ lần gặp đầu, lưu cha r và chữ số d. Gặp dư 0 thì lần cha và đảo chữ số; hết queue không gặp thì in 0. Dùng ký hiệu chưa thăm khác gốc, chẳng hạn parent=-2 chưa thăm, -1 là gốc. Queue không cần chứa cả số rất dài. |
 | 71 | [Đong nước](https://laptrinhonline.club/problem/tichpxdongnuoc) | `deque`, tuple làm khóa dict, `gcd`, khoảng cách | BFS từ (0,0) với sáu thao tác: đầy/rỗng mỗi bình và rót qua lại bằng min. Dừng khi một bình có k lít. Dùng dict để chỉ lưu trạng thái gặp được; không cấp phát ma trận 10001×10001. Có thể loại trước khi k>max(n,m) hoặc k không chia hết gcd(n,m). Mỗi thao tác một bước; BFS tìm ít bước nhất. |
 | 75 | [Vùng kín](https://laptrinhonline.club/problem/tichpxvungkin) | `deque`, ma trận visited, cờ bool, kiểm tra biên | BFS từng vùng ô 0 theo bốn hướng. Đặt kin=True, gặp bất kỳ ô chạm biên thì kin=False; vẫn duyệt hết vùng để đánh dấu. Chỉ đếm sau khi BFS kết thúc và kin còn đúng. Khác Phân vùng ảnh dùng tám hướng. O(n*m). |
+| 89 | [Thoát khỏi mê cung](#de-bai-89) | `deque`, ma trận khoảng cách, tuple | Tìm S và E trong lưới; BFS bốn hướng, tránh tường và ô đã thăm. Đánh dấu khi đưa vào queue, trả khoảng cách tới E hoặc -1. O(nm). |
+| 99 | [Đi về nhà](https://laptrinhonline.club/problem/khmtk63e3) | `deque`, chuỗi, list khoảng cách | Coi mỗi bông hoa là một trạng thái; từ x thử các vị trí x+1 đến x+d còn trong hàng và có hoa. BFS tìm số bước tới n, đánh dấu khi enqueue. O(nd), phù hợp n<=100 của đề. |
+| 100 | [Phản ứng hóa học](https://laptrinhonline.club/problem/mah3) | Danh sách kề, `visited`, BFS/DFS, `**` | Lập đồ thị vô hướng theo cặp chất có phản ứng. Đếm c thành phần liên thông, kể cả đỉnh cô lập. Mỗi thành phần kích thước s đóng góp s-1 lần nhân đôi, đáp án 2**(n-c). O(n+m). |
 
 ### Khung BFS cơ bản
 
@@ -397,6 +418,7 @@ Với nhiều nguồn, khởi tạo mọi nguồn có dist=0 và đưa hết và
 | 65 | [Thuật toán mã hóa Huffman](https://laptrinhonline.club/problem/tichpxhuffman) | Dict tần suất, heap | Đếm ký tự, heapify các tần suất. Ghép hai nhỏ nhất và cộng chi phí như Nối thanh; tổng chi phí là tổng bit mã hóa khi có ít nhất hai loại ký tự. Không tính newline thành ký tự. Đề chưa nêu rõ quy ước mã cho chuỗi chỉ một loại ký tự; cần xác minh trường hợp đó khi kiểm tra, không tự coi ảnh AC chứng minh một quy ước cụ thể. |
 | 66 | [Phần tử trung vị](https://laptrinhonline.club/problem/tichpxmedian) | Hai heap, số đối, cân bằng kích thước | low giữ nửa nhỏ bằng max-heap số đối, high giữ nửa lớn bằng min-heap. Thêm số vào nửa thích hợp rồi chuyển đỉnh để len(low)=len(high) hoặc hơn 1. Trung vị mỗi tiền tố là `-low[0]`; số phần tử chẵn lấy trung vị thấp, không lấy trung bình. O(n log n). |
 | 67 | [Giao hàng](https://laptrinhonline.club/problem/tichpxshipper) | Sort deadline, min-heap thưởng | Sắp việc theo hạn t tăng. Với thưởng v, push v; nếu số việc chọn len(heap)>t thì pop thưởng nhỏ nhất. Cuối cùng sum(heap). Mỗi việc mất 1 đơn vị thời gian; heap là tập việc dự định làm kịp hạn, có thể thay quyết định trước đó. Phải sort trước khi so len với hạn. O(n log n). |
+| 87 | [Phục vụ khách hàng ưu tiên](#de-bai-87) | `heapq`, tuple, chỉ số sự kiện | Lưu (-độ ưu tiên, thứ tự đến, tên). ADD dùng heappush; SERVE dùng heappop hoặc in EMPTY nếu rỗng. O(q log q). |
 
 ### Hai mẫu heap hay dùng
 
@@ -533,6 +555,7 @@ Xử lý offline từ trạng thái cuối, nối lại hai đoạn khi bỏ m�
 | STT | Bài | Python sử dụng | Cách làm và chú ý |
 |---:|---|---|---|
 | 72 | [Đường đi ít chi phí nhất trong bài Mọi con đường về không](https://laptrinhonline.club/problem/tichpxzeromin) | `heapq`, tuple (chi phí, đỉnh), danh sách kề, `isqrt` | Từ u=a*b, a<=b, sinh v=(a-1)*(b+1); chi phí b//a nếu b%a==0, ngược lại a+b. Dùng Dijkstra: lấy chi phí nhỏ nhất, bỏ bản ghi cũ, nới lỏng cạnh. Không dùng visited ngay khi enqueue như BFS. Có thể dùng DP theo thứ tự giảm vì mọi cạnh đi tới số nhỏ hơn. s=f cho 0; không tới được cho -1. |
+| 90 | [Đường đi ngắn nhất](#de-bai-90) | Danh sách kề, `heapq`, `dist` | Đồ thị hai chiều có trọng số dương: Dijkstra từ đỉnh 1, bỏ bản ghi heap lỗi thời, cập nhật khi khoảng cách giảm. Trả dist[n] hoặc -1 nếu không tới được. |
 
 
 <a id="nhom-xvi"></a>
@@ -556,3 +579,436 @@ Tổng tiền tố + bisect + mảng hiệu để xử lý đóng góp trên nhi
 | STT | Bài | Python sử dụng | Cách làm và chú ý |
 |---:|---|---|---|
 | 73 | [Làm bóng tuyết](https://laptrinhonline.club/problem/snowparty) | Prefix sum, `bisect_left`, mảng hiệu, list | P là tổng tiền tố nhiệt độ. Với quả ngày i, tìm ngày j tan hết bằng bisect_left(P,P[i]+V[i],i+1)-1; dùng mảng hiệu đếm các ngày tan trọn T và cộng phần còn lại vào extra[j]. Nếu chưa tan hết trong n ngày thì đánh dấu tới n. Đáp án ngày j là active*T[j]+extra[j]. O(n log n); cũng có cách heap kết hợp tổng nhiệt tích lũy. |
+
+<a id="phu-luc-de-bai"></a>
+## Phụ lục: đề bài không còn truy cập được qua link
+
+Phần này lưu lại yêu cầu, giới hạn, định dạng dữ liệu và ví dụ để có thể làm bài trực tiếp từ README. Bài 76–77 được đối chiếu với PDF thực hành; bài 81–90 được chép lại từ ảnh người học đã gửi ngày 03/11/2026. Câu chữ được trình bày lại cho gọn, giữ nguyên yêu cầu và dữ liệu mẫu. Không bổ sung giới hạn thời gian/bộ nhớ nếu ảnh không cung cấp.
+
+| STT | Đề bài |
+|---:|---|
+| 76 | [Tiền điện nhà Dan](#de-bai-76) |
+| 77 | [Đếm số số chính phương](#de-bai-77) |
+| 81 | [Tổng các ước](#de-bai-81) |
+| 82 | [Chuẩn hóa họ tên](#de-bai-82) |
+| 83 | [Đếm số nguyên tố](#de-bai-83) |
+| 84 | [Từ xuất hiện nhiều nhất](#de-bai-84) |
+| 85 | [Dãy ngoặc đúng](#de-bai-85) |
+| 86 | [Chia bài](#de-bai-86) |
+| 87 | [Phục vụ khách hàng ưu tiên](#de-bai-87) |
+| 88 | [Ngày ấm hơn](#de-bai-88) |
+| 89 | [Thoát khỏi mê cung](#de-bai-89) |
+| 90 | [Đường đi ngắn nhất](#de-bai-90) |
+
+<a id="de-bai-76"></a>
+### 76. Tiền điện nhà Dan
+
+Nguồn: [Hướng dẫn thực hành Buổi 1](<C:/Users/grind/Desktop/thuật toán/Huong_dan_thuc_hanh_Buoi_1.pdf>), trang 5, mã `hhb1`. Thời gian: 1 giây; bộ nhớ: 98 MB.
+
+Nhà Dan tính tiền điện theo tổng số điện đã dùng trong tháng:
+
+| Số điện n | Đơn giá |
+|---|---:|
+| n < 50 | 100 |
+| 50 ≤ n < 1000 | 500 |
+| 1000 ≤ n < 10000 | 1000 |
+| n ≥ 10000 | 1200 |
+
+Cho số điện `n`, hãy tính số tiền phải trả. Toàn bộ số điện được tính theo **một đơn giá tương ứng với n**, không tính lũy tiến.
+
+**Input:** Một số nguyên `n`, với `0 ≤ n ≤ 10^7`.
+
+**Output:** Một số nguyên là tiền điện phải trả.
+
+**Ví dụ — Input:**
+
+```text
+10
+```
+
+**Output:**
+
+```text
+1000
+```
+
+Ghi chú nguồn: PDF viết “số nguyên dương” nhưng giới hạn cho phép `n = 0`; ở đây giữ giới hạn `0 ≤ n`.
+
+[Về nhóm I](#nhom-i) · [Danh sách đề lưu](#phu-luc-de-bai)
+
+<a id="de-bai-77"></a>
+### 77. Đếm số số chính phương
+
+Nguồn: [Hướng dẫn thực hành Buổi 1](<C:/Users/grind/Desktop/thuật toán/Huong_dan_thuc_hanh_Buoi_1.pdf>), trang 17, mã `tichpxdemsocp`; cũng xuất hiện trong Buổi 2, trang 15. Thời gian: 1 giây; bộ nhớ: 977 MB.
+
+Cho hai số nguyên dương `A, B`. Đếm số số chính phương trong đoạn `[A, B]`, kể cả hai đầu mút nếu chúng là số chính phương.
+
+**Input:**
+
+- Dòng đầu chứa số bộ kiểm thử `N`, với `1 ≤ N ≤ 100`.
+- `N` dòng tiếp theo, mỗi dòng chứa `A B`, với `1 ≤ A ≤ B ≤ 10^9`.
+
+**Output:** `N` dòng, mỗi dòng là số lượng số chính phương của bộ kiểm thử tương ứng.
+
+**Ví dụ — Input:**
+
+```text
+2
+8 16
+17 24
+```
+
+**Output:**
+
+```text
+2
+0
+```
+
+**Giải thích:** Đoạn `[8,16]` có `9` và `16`; đoạn `[17,24]` không có số chính phương.
+
+[Về nhóm III](#nhom-iii) · [Danh sách đề lưu](#phu-luc-de-bai)
+
+<a id="de-bai-81"></a>
+### 81. Tổng các ước
+
+Cho số nguyên dương `n`. Tính tổng tất cả các ước số dương của `n`, kể cả `1` và chính `n`.
+
+**Input:** Một số nguyên dương `n`, với `1 ≤ n ≤ 10^12`.
+
+**Output:** Một số nguyên là tổng các ước dương của `n`.
+
+**Ví dụ — Input:**
+
+```text
+12
+```
+
+**Output:**
+
+```text
+28
+```
+
+**Giải thích:** Các ước là `1, 2, 3, 4, 6, 12`, có tổng bằng `28`.
+
+[Về nhóm III](#nhom-iii) · [Danh sách đề lưu](#phu-luc-de-bai)
+
+<a id="de-bai-82"></a>
+### 82. Chuẩn hóa họ tên
+
+Họ tên được nhập có thể thừa dấu cách ở đầu, cuối hoặc giữa các từ, đồng thời chữ hoa/thường lẫn lộn. Chuẩn hóa theo hai quy tắc:
+
+- Các từ cách nhau đúng một dấu cách; không có dấu cách đầu và cuối dòng.
+- Mỗi từ có chữ cái đầu viết hoa, các chữ cái còn lại viết thường.
+
+**Input:**
+
+- Dòng đầu chứa `t`, với `1 ≤ t ≤ 100`.
+- `t` dòng tiếp theo, mỗi dòng là một họ tên chỉ gồm chữ cái tiếng Anh và dấu cách, có ít nhất một chữ cái, độ dài không quá `200` ký tự.
+
+**Output:** `t` dòng họ tên đã chuẩn hóa.
+
+**Ví dụ — Input:**
+
+```text
+3
+  nGUYEN   van  an
+tran THI    binh
+le minh
+```
+
+**Output:**
+
+```text
+Nguyen Van An
+Tran Thi Binh
+Le Minh
+```
+
+[Về nhóm I](#nhom-i) · [Danh sách đề lưu](#phu-luc-de-bai)
+
+<a id="de-bai-83"></a>
+### 83. Đếm số nguyên tố
+
+Cho `t` truy vấn, mỗi truy vấn gồm hai số nguyên `a, b`. Với mỗi truy vấn, đếm số số nguyên tố trong đoạn `[a,b]`.
+
+**Input:**
+
+- Dòng đầu chứa `t`, với `1 ≤ t ≤ 10^5`.
+- `t` dòng tiếp theo, mỗi dòng chứa `a b`, với `1 ≤ a ≤ b ≤ 10^6`.
+
+**Output:** `t` dòng, mỗi dòng là số lượng số nguyên tố trong đoạn tương ứng.
+
+**Ví dụ — Input:**
+
+```text
+3
+1 10
+11 20
+14 16
+```
+
+**Output:**
+
+```text
+4
+4
+0
+```
+
+**Giải thích:** `[1,10]` có `2, 3, 5, 7`; `[11,20]` có `11, 13, 17, 19`; `[14,16]` không có số nguyên tố.
+
+[Về nhóm III](#nhom-iii) · [Danh sách đề lưu](#phu-luc-de-bai)
+
+<a id="de-bai-84"></a>
+### 84. Từ xuất hiện nhiều nhất
+
+Cho văn bản gồm `n` từ, mỗi từ chỉ gồm chữ cái thường tiếng Anh. Tìm từ xuất hiện nhiều lần nhất và số lần xuất hiện của nó. Nếu nhiều từ có cùng tần suất lớn nhất, chọn từ nhỏ nhất theo thứ tự từ điển.
+
+**Input:**
+
+- Dòng đầu chứa `n`, với `1 ≤ n ≤ 10^5`.
+- Dòng tiếp theo gồm `n` từ cách nhau bởi dấu cách; mỗi từ dài không quá `20` ký tự.
+
+**Output:** Một dòng gồm từ được chọn và số lần xuất hiện, cách nhau một dấu cách.
+
+**Ví dụ — Input:**
+
+```text
+10
+an binh an chi binh an dung binh chi an
+```
+
+**Output:**
+
+```text
+an 4
+```
+
+**Giải thích:** `an` xuất hiện 4 lần, `binh` 3 lần, `chi` 2 lần, `dung` 1 lần.
+
+[Về nhóm V](#nhom-v) · [Danh sách đề lưu](#phu-luc-de-bai)
+
+<a id="de-bai-85"></a>
+### 85. Dãy ngoặc đúng
+
+Một dãy chỉ gồm các ký tự `(`, `)`, `[`, `]`, `{`, `}` được gọi là đúng nếu mỗi ngoặc mở có một ngoặc đóng cùng loại tương ứng ở phía sau, và các cặp ngoặc lồng nhau đúng thứ tự.
+
+Ví dụ `([]{})` và `{[()()]}` là đúng; `([)]` và `((()` không đúng. Kiểm tra từng dãy được cho.
+
+**Input:**
+
+- Dòng đầu chứa `t`, với `1 ≤ t ≤ 10`.
+- `t` dòng tiếp theo, mỗi dòng là một dãy ngoặc không có dấu cách, độ dài từ `1` đến `10^5`.
+
+**Output:** Với mỗi dãy, in `YES` nếu đúng, ngược lại in `NO`, mỗi kết quả trên một dòng.
+
+**Ví dụ — Input:**
+
+```text
+4
+([]{})
+([)]
+((()
+{[()()]}
+```
+
+**Output:**
+
+```text
+YES
+NO
+NO
+YES
+```
+
+**Phân biệt:** Đề này không yêu cầu thứ bậc lồng giữa ba loại ngoặc như bài 80.
+
+[Về nhóm VIII](#nhom-viii) · [Danh sách đề lưu](#phu-luc-de-bai)
+
+<a id="de-bai-86"></a>
+### 86. Chia bài
+
+Có `n` lá bài đánh số từ `1` đến `n`, xếp thành chồng với lá `1` trên cùng và lá `n` dưới cùng. Khi chồng còn ít nhất hai lá, lặp hai thao tác theo thứ tự:
+
+1. Bỏ lá trên cùng ra ngoài.
+2. Chuyển lá đang ở trên cùng xuống dưới cùng của chồng bài.
+
+Hãy cho biết thứ tự các lá bị bỏ và lá còn lại cuối cùng.
+
+**Input:** Một số nguyên `n`, với `2 ≤ n ≤ 2 × 10^5`.
+
+**Output:**
+
+- Dòng đầu gồm `n-1` số hiệu lá bị bỏ theo đúng thứ tự, cách nhau một dấu cách.
+- Dòng thứ hai là số hiệu lá còn lại.
+
+**Ví dụ — Input:**
+
+```text
+7
+```
+
+**Output:**
+
+```text
+1 3 5 7 4 2
+6
+```
+
+[Về nhóm VIII](#nhom-viii) · [Danh sách đề lưu](#phu-luc-de-bai)
+
+<a id="de-bai-87"></a>
+### 87. Phục vụ khách hàng ưu tiên
+
+Quầy giao dịch phục vụ khách có mức ưu tiên lớn hơn trước. Nếu cùng mức ưu tiên, khách đến trước được phục vụ trước. Có `q` sự kiện theo trình tự thời gian, mỗi sự kiện thuộc một trong hai loại:
+
+- `ADD name p`: khách tên `name`, mức ưu tiên `p`, đến xếp hàng.
+- `SERVE`: gọi một khách lên phục vụ; khách đó rời hàng đợi.
+
+Với mỗi sự kiện `SERVE`, cho biết tên khách được phục vụ hoặc `EMPTY` nếu không còn ai chờ.
+
+**Input:**
+
+- Dòng đầu chứa `q`, với `1 ≤ q ≤ 2 × 10^5`.
+- `q` dòng tiếp theo, mỗi dòng là một sự kiện.
+- Tên chỉ gồm chữ cái tiếng Anh, dài không quá `10` ký tự.
+- `p` là số nguyên, `1 ≤ p ≤ 10^9`.
+- Có ít nhất một sự kiện `SERVE`.
+
+**Output:** Mỗi sự kiện `SERVE` tương ứng một dòng tên khách hoặc `EMPTY`.
+
+**Ví dụ — Input:**
+
+```text
+8
+ADD An 3
+ADD Binh 5
+ADD Chi 3
+SERVE
+SERVE
+ADD Dung 1
+SERVE
+SERVE
+```
+
+**Output:**
+
+```text
+Binh
+An
+Chi
+Dung
+```
+
+**Giải thích:** Binh có ưu tiên 5 nên được phục vụ đầu tiên. An và Chi cùng ưu tiên 3, nhưng An đến trước. Cuối cùng đến Dung.
+
+[Về nhóm XI](#nhom-xi) · [Danh sách đề lưu](#phu-luc-de-bai)
+
+<a id="de-bai-88"></a>
+### 88. Ngày ấm hơn
+
+Trạm khí tượng ghi nhiệt độ của `n` ngày liên tiếp; ngày thứ `i` có nhiệt độ `a_i`. Với mỗi ngày, tìm số ngày ít nhất phải chờ để gặp một ngày phía sau có nhiệt độ **lớn hơn hẳn**. Nếu không có ngày như vậy, trả `0`.
+
+**Input:**
+
+- Dòng đầu chứa `n`, với `1 ≤ n ≤ 2 × 10^5`.
+- Dòng thứ hai gồm `n` số nguyên `a_1, ..., a_n`, với `1 ≤ a_i ≤ 100`.
+
+**Output:** Một dòng gồm `n` số; số thứ `i` là số ngày phải chờ tính từ ngày `i`.
+
+**Ví dụ — Input:**
+
+```text
+8
+23 24 25 21 19 22 26 23
+```
+
+**Output:**
+
+```text
+1 1 4 2 1 1 0 0
+```
+
+**Giải thích:** Ngày 3 có nhiệt độ 25; ngày ấm hơn gần nhất phía sau là ngày 7, nhiệt độ 26, nên phải chờ 4 ngày.
+
+[Về nhóm VIII](#nhom-viii) · [Danh sách đề lưu](#phu-luc-de-bai)
+
+<a id="de-bai-89"></a>
+### 89. Thoát khỏi mê cung
+
+Mê cung hình chữ nhật có `n` hàng, `m` cột. Mỗi ô là một ký tự:
+
+- `.`: ô trống.
+- `#`: tường.
+- `S`: vị trí xuất phát.
+- `E`: lối ra.
+
+Mỗi bước được đi từ một ô sang một trong bốn ô kề cạnh: trên, dưới, trái, phải, miễn ô đó không phải tường và vẫn nằm trong mê cung.
+
+Tính số bước ít nhất từ `S` đến `E`. Nếu không thể tới lối ra, in `-1`.
+
+**Input:**
+
+- Dòng đầu gồm `n m`, với `1 ≤ n,m ≤ 500`.
+- `n` dòng tiếp theo, mỗi dòng là một xâu gồm đúng `m` ký tự mô tả mê cung.
+- Mê cung có đúng một `S` và đúng một `E`.
+
+**Output:** Một số nguyên là số bước ít nhất, hoặc `-1` nếu không có đường đi.
+
+**Ví dụ — Input:**
+
+```text
+5 6
+S..#..
+.#.#.#
+.#...#
+.####.
+.....E
+```
+
+**Output:**
+
+```text
+9
+```
+
+**Giải thích:** Đi xuống cột đầu 4 bước, rồi sang phải theo hàng cuối 5 bước, tổng 9 bước.
+
+[Về nhóm X](#nhom-x) · [Danh sách đề lưu](#phu-luc-de-bai)
+
+<a id="de-bai-90"></a>
+### 90. Đường đi ngắn nhất
+
+Mạng lưới giao thông có `n` nút, đánh số từ `1` đến `n`, và `m` con đường **hai chiều**. Đường thứ `i` nối `u_i` với `v_i`, có độ dài `w_i`. Tìm độ dài đường đi ngắn nhất từ nút `1` đến nút `n`.
+
+**Input:**
+
+- Dòng đầu gồm `n m`, với `2 ≤ n ≤ 5 × 10^4`, `1 ≤ m ≤ 10^5`.
+- `m` dòng tiếp theo, mỗi dòng gồm ba số nguyên `u v w`, với `1 ≤ u,v ≤ n`, `u ≠ v`, `1 ≤ w ≤ 10^6`.
+
+**Output:** Một số nguyên là độ dài ngắn nhất từ `1` đến `n`, hoặc `-1` nếu không có đường đi.
+
+**Ví dụ — Input:**
+
+```text
+5 6
+1 2 4
+1 3 1
+3 2 2
+2 4 5
+3 4 8
+4 5 3
+```
+
+**Output:**
+
+```text
+11
+```
+
+**Giải thích:** Đường đi `1 → 3 → 2 → 4 → 5` có tổng độ dài `1+2+5+3=11`.
+
+[Về nhóm XV](#nhom-xv) · [Danh sách đề lưu](#phu-luc-de-bai)
+
