@@ -1,28 +1,23 @@
 
 # GIAO HÀNG
 
-from sys import stdin
 import heapq
 
-input = stdin.readline
-
-orders = []
 n = int(input())
+orders = []
 
-for _ in range(n):
+for i in range(n):
     t, v = map(int, input().split())
     orders.append((t, v))
 
 orders.sort(key=lambda arr: arr[0])
 
-chosen = []     # min-heap chứa tiền thưởng của các món đang chọn
+chosen = []
 
+for i in range(n):
+    heapq.heappush(chosen, orders[i][1])
 
-# thử nhận thêm một đơn, nếu không giao kịp thì bỏ đơn ít giá trị nhất
-for t, v in orders:
-    heapq.heappush(chosen, v)
-
-    if len(chosen) > t:
+    if orders[i][0] < len(chosen):
         heapq.heappop(chosen)
 
 print(sum(chosen))
